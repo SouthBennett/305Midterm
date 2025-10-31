@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Dream Vacation</title>
+
+  <script src="/js/vacation.js" defer></script>
+
+  <link rel="icon" href="images/plane-favicon.jpg" />
+
+  <link rel="stylesheet" href="/styles/styles.css">
+  
+
+</head>
+<body>
+  <main class="container">
+    <form id="vacation-form" class="booking-form" action="/submit-booking" method="POST" novalidate>
+      <div class="banner">
+        <img src="https://bit.ly/305-vacation" alt="Vacation Banner" class="banner-img" />
+        <h1 class="banner-text">Book Your Dream Vacation</h1>
+      </div>
+
+      <div class="form-content">
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination" required>
+          <option value="">Choose a destination...</option>
+          <option value="bali">Bali, Indonesia</option>
+          <option value="paris">Paris, France</option>
+          <option value="tokyo">Tokyo, Japan</option>
+          <option value="maldives">Maldives</option>
+          <option value="nyc">New York City, United States of America</option>
+        </select>
+        <span id="err-destination" class="error"></span>
+
+        <div class="two-column">
+          <div class="input-group">
+            <label for="date">Departure Date</label>
+            <input type="date" id="date" name="date" required />
+            <span id="err-date" class="error"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="travelers">Number of Travelers</label>
+            <input
+              type="number"
+              id="travelers"
+              name="travelers"
+              min="1"
+              value="0"
+              required
+              />
+              <span id="err-travelers" class="error"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Find My Vacation</button>
+      </div>
+    </form>
+
+    <footer>
+      <p>
+        GitHub Repository:
+        <a href="#" id="github-link">[url-here]</a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
